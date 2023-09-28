@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>JigSaw Puzzle</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="script.js"></script>
+  </head>
+  <body onload="main()">
+    <img id="sample" src="sample.jpeg" alt="sample" hidden="true" />
+    <button id="menu-button" class="btn" onclick="showMenu()">
+      <i class="fa fa-bars"></i>
+    </button>
+    <canvas id="myCanvas"></canvas>
+    <canvas id="colourCanvas"></canvas>
+    <div id="blocker">
+      <div id="menu-items" class="container">
+        <button id="close-menu" class="btn" onclick="closeMenu()" hidden="true">
+          <i class="fa fa-close"></i>
+        </button>
+        <div id="finish-banner" hidden="true">
+          <h1>Finished in</h1>
+          <h1 id="time-done"></h1>
+        </div>
+        <img id="completeimage" class="center" src="sample.jpeg" alt="sample" />
+        <div id="menu">
+          <div id="control">
+            <select id="difficulty" class="center" onChange="setDifficulty()">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <button id="start-button" class="center" onclick="restart()">
+            Start
+          </button>
+        </div>
+        <div id="time"></div>
+      </div>
+    </div>
+  </body>
+</html>
